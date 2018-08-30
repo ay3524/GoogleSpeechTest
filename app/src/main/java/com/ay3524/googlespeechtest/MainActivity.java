@@ -76,11 +76,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        textViewStatus = findViewById(R.id.txt_status);
+        textViewStreamedText = findViewById(R.id.txt_text_streamed);
+        textViewRecognizedText = findViewById(R.id.txt_text_recognized);
+
         buttonStart = findViewById(R.id.btn_start);
         buttonStart.setOnClickListener(this);
         buttonStop = findViewById(R.id.btn_stop);
         buttonStop.setOnClickListener(this);
-
 
         final Resources resources = getResources();
         final Resources.Theme theme = getTheme();
